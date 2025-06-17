@@ -32,22 +32,6 @@ Replace the username and password with your MySQL login details.
 
 ---
 
-## How to Run
-
-You can run the app using your IDE or terminal:
-
-```bash
-./mvnw spring-boot:run
-```
-
-After running, the server will start at:
-
-```
-http://localhost:8080/
-```
-
----
-
 ## API List
 
 ## 📮 API Endpoints
@@ -64,8 +48,3 @@ http://localhost:8080/
 | GET    | `/batches/{gtin}`    | Get all batches for a given GTIN string                    |
 
 ---
-
-## Notes
-
-- Make sure MySQL is running
-- Use Postman to test APIs
