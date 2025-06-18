@@ -1,5 +1,6 @@
 package com.twinleaves.GtinManager.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class BatchService {
     private GtinRepository gtinRepositry;
 
     public Batch saveBatch(Batch batch){
+        batch.setInwardedOn(LocalDate.now());
         long gtinId = batch.getGtin().getId();
         Gtin gtin = gtinRepositry.findById(gtinId).orElseThrow(()->new RuntimeException("No gtin found with id :"+gtinId));
         batch.setGtin(gtin);
